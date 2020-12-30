@@ -32,6 +32,13 @@ jobs:
       - name: Install dependencies
         run: |
           make install
+      - name: Check paths
+        run: |
+          echo $PATH
+          which pylint
+          python --version
+          pwd
+          ls -lrt
 
       - name: Lint with Pylint
         run: |
